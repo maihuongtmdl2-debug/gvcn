@@ -1,0 +1,218 @@
+{
+  "teacherInfo": {
+    "name": "Cô giáo Mai Hường",
+    "role": "Giáo viên Chủ nhiệm Khối 10 - 11 - 12 (Hệ Văn hóa & Đào tạo Nghề)",
+    "school": "Trường Cao đẳng Công nghiệp, Thương mại và Du lịch",
+    "phone": "0982909515",
+    "phoneFormatted": "0982.909.515",
+    "zalo": "https://zalo.me/0982909515",
+    "facebook": "https://www.facebook.com/huong.tn.34518",
+    "slogan": "Từ núi cao về mái trường chung – Vững văn hóa, giỏi tay nghề, ấm áp tình yêu thương nội trú!"
+  },
+  "studyPrograms": [
+    {
+      "id": "grade-10",
+      "grade": "10",
+      "badge": "Khối Lớp 10",
+      "title": "Khối Lớp 10 – Làm Quen Môi Trường Mới & Xây Nền Tảng Vững Chắc",
+      "sampleNote": "[DỮ LIỆU MẪU - CẬP NHẬT THEO HỌC KỲ]",
+      "culturalFocus": "Hệ thống hóa kiến thức nền tảng từ THCS lên THPT; tập trung các môn Toán, Ngữ Văn, Lịch Sử, Địa Lý, Vật Lý, Hóa Học theo chương trình Giáo dục thường xuyên cấp THPT. Rèn phương pháp tự học buổi tối tại Ký túc xá.",
+      "vocationalFocus": "Nhập môn kỹ năng nghề cơ bản, tham quan xưởng thực hành, rèn luyện tác phong công nghiệp, an toàn lao động và làm quen thiết bị thực tế tại Trường CĐ Công nghiệp, Thương mại và Du lịch.",
+      "supportFocus": "Cô Mai Hường đặc biệt sát sao hỗ trợ các em lớp 10 mới từ bản làng vùng cao xuống trường, hướng dẫn từng bước cách sắp xếp phòng ở KTX, quản lý tiền ăn sáng/trưa/tối và kết bạn.",
+      "dailySchedule": [
+        {
+          "time": "05:45 - 06:30",
+          "activity": "Thức dậy, thể dục buổi sáng, vệ sinh cá nhân & ăn sáng tại KTX"
+        },
+        {
+          "time": "07:00 - 11:15",
+          "activity": "Học các môn Văn hóa lớp 10 trên giảng đường"
+        },
+        {
+          "time": "11:30 - 13:30",
+          "activity": "Ăn trưa tại nhà ăn nhà trường & nghỉ trưa tại phòng Ký túc xá"
+        },
+        {
+          "time": "13:45 - 17:00",
+          "activity": "Học lý thuyết cơ sở nghề & thực hành xưởng cơ bản"
+        },
+        {
+          "time": "17:15 - 19:00",
+          "activity": "Thể thao chiều (bóng chuyền, cầu lông), tắm giặt & ăn tối"
+        },
+        {
+          "time": "19:30 - 21:30",
+          "activity": "Giờ tự học văn hóa buổi tối có cán bộ lớp & cô chủ nhiệm đôn đốc"
+        },
+        {
+          "time": "22:00",
+          "activity": "Điểm danh quân số phòng KTX, tắt đèn nghỉ ngơi đảm bảo sức khỏe"
+        }
+      ]
+    },
+    {
+      "id": "grade-11",
+      "grade": "11",
+      "badge": "Khối Lớp 11",
+      "title": "Khối Lớp 11 – Tăng Tốc Kiến Thức & Rèn Luyện Tay Nghề Chuyên Sâu",
+      "sampleNote": "[DỮ LIỆU MẪU - CẬP NHẬT THEO HỌC KỲ]",
+      "culturalFocus": "Hoàn thành trọn vẹn chương trình Văn hóa lớp 11; nâng cao kỹ năng giải bài tập, làm bài kiểm tra định kỳ đạt điểm khá giỏi; chuẩn bị sớm kiến thức cốt lõi cho năm cuối cấp.",
+      "vocationalFocus": "Tăng thời lượng thực hành chuyên ngành tại xưởng (Điện công nghiệp, Công nghệ Ô tô, Điện tử, Thương mại - Du lịch, Chế biến món ăn, Tin học ứng dụng...). Rèn tay nghề thành thạo từng mô-đun.",
+      "supportFocus": "Phát huy vai trò anh chị khóa giữa: kèm cặp các em lớp 10 cùng phòng KTX, tham gia tích cực câu lạc bộ văn nghệ, thể thao và giữ vững kỷ luật nội trú.",
+      "dailySchedule": [
+        {
+          "time": "05:45 - 06:30",
+          "activity": "Thức dậy, gấp chăn màn vuông vắn, ăn sáng chuẩn bị lên xưởng"
+        },
+        {
+          "time": "07:00 - 11:15",
+          "activity": "Thực hành nghề chuyên sâu tại xưởng thực hành của trường"
+        },
+        {
+          "time": "11:30 - 13:30",
+          "activity": "Ăn trưa dinh dưỡng & nghỉ trưa tại Ký túc xá"
+        },
+        {
+          "time": "13:45 - 17:00",
+          "activity": "Học các môn Văn hóa THPT khối 11 trên lớp"
+        },
+        {
+          "time": "17:15 - 19:00",
+          "activity": "Sinh hoạt ngoại khóa, chăm sóc bồn hoa KTX, ăn tối"
+        },
+        {
+          "time": "19:30 - 21:30",
+          "activity": "Ôn bài văn hóa & thảo luận nhóm kỹ năng nghề"
+        },
+        {
+          "time": "22:00",
+          "activity": "Điểm danh nội trú, khóa cửa phòng an toàn và đi ngủ đúng giờ"
+        }
+      ]
+    },
+    {
+      "id": "grade-12",
+      "grade": "12",
+      "badge": "Khối Lớp 12",
+      "title": "Khối Lớp 12 – Về Đích Tốt Nghiệp THPT & Vững Tay Nghề Ra Trường",
+      "sampleNote": "[DỮ LIỆU MẪU - CẬP NHẬT THEO HỌC KỲ]",
+      "culturalFocus": "Tập trung ôn luyện tổng hợp, luyện đề sát cấu trúc Kỳ thi Tốt nghiệp THPT Quốc gia. Phân nhóm học sinh để kèm sát từng môn thi, quyết tâm 100% đỗ tốt nghiệp THPT.",
+      "vocationalFocus": "Hoàn thiện các mô-đun nghề nâng cao, thực tập trải nghiệm thực tế tại doanh nghiệp và thi tốt nghiệp lấy Bằng Trung cấp nghề chính quy để học liên thông Cao đẳng hoặc đi làm có thu nhập ngay.",
+      "supportFocus": "Tư vấn tâm lý mùa thi, hướng dẫn làm hồ sơ thi tốt nghiệp, định hướng liên thông Cao đẳng hoặc kết nối việc làm uy tín để phụ huynh vùng cao hoàn toàn yên tâm.",
+      "dailySchedule": [
+        {
+          "time": "05:30 - 06:30",
+          "activity": "Thức dậy sớm ôn bài nhẹ nhàng, vệ sinh cá nhân & ăn sáng"
+        },
+        {
+          "time": "07:00 - 11:15",
+          "activity": "Học chính khóa & Ôn luyện trọng tâm Tốt nghiệp THPT"
+        },
+        {
+          "time": "11:30 - 13:30",
+          "activity": "Ăn trưa, nghỉ ngơi lấy lại năng lượng tại KTX"
+        },
+        {
+          "time": "13:45 - 17:00",
+          "activity": "Thực hành nghề tổng hợp / Luyện đề thi thử theo tổ hợp môn"
+        },
+        {
+          "time": "17:15 - 19:00",
+          "activity": "Vận động thể chất giải tỏa căng thẳng, ăn tối tại KTX"
+        },
+        {
+          "time": "19:30 - 22:00",
+          "activity": "Tự học & giải đề ôn thi dưới sự đồng hành của cô Mai Hường"
+        },
+        {
+          "time": "22:15",
+          "activity": "Điểm danh, nghỉ ngơi tuyệt đối không thức quá khuya hại sức khỏe"
+        }
+      ]
+    }
+  ],
+  "newsAndHonors": [
+    {
+      "id": "news-1",
+      "category": "thong-bao",
+      "categoryLabel": "Thông báo chung",
+      "date": "26/10/2026",
+      "tag": "[DỮ LIỆU MẪU - CÔ MAI HƯỜNG CẬP NHẬT]",
+      "title": "Kế hoạch sinh hoạt lớp đầu tuần & Kiểm tra phòng ở Ký túc xá mùa Thu - Đông",
+      "summary": "Cô Mai Hường thông báo lịch kiểm tra chăn ấm, bình nước nóng và nề nếp vệ sinh các phòng nội trú khối 10, 11, 12 để chuẩn bị đón đợt không khí lạnh.",
+      "content": "Thân gửi các bậc phụ huynh và các em học sinh khối 10, 11, 12!\n\nThời tiết đang chuyển sang mùa lạnh, để đảm bảo sức khỏe cho các em học sinh từ vùng cao xuống ở nội trú, tuần này cô Mai Hường cùng Ban quản lý KTX sẽ kiểm tra và hỗ trợ từng phòng:\n\n1. Kiểm tra hệ thống bình nóng lạnh, cửa sổ chắn gió và chăn đệm ấm của từng em.\n2. Nhắc nhở các em tuyệt đối giữ ấm cổ, đi tất khi học sáng sớm và không tắm quá muộn sau 20h30.\n3. Phụ huynh ở quê nếu gửi thêm áo ấm, chăn bông xuống trường qua xe khách, vui lòng nhắn trước vào Zalo 0982.909.515 cho cô Hường để cô hướng dẫn các em ra nhận an toàn."
+    },
+    {
+      "id": "news-2",
+      "category": "hoc-tap",
+      "categoryLabel": "Lịch thi & Học tập",
+      "date": "24/10/2026",
+      "tag": "[DỮ LIỆU MẪU - CÔ MAI HƯỜNG CẬP NHẬT]",
+      "title": "Lịch ôn tập giữa học kỳ I các môn Văn hóa & Lịch thi kết thúc mô-đun Thực hành nghề",
+      "summary": "Tổng hợp lịch kiểm tra định kỳ các môn Văn hóa THPT và lịch chấm điểm bài thực hành tại xưởng cho học sinh khối 10, 11 và 12.",
+      "content": "Cô Mai Hường gửi tới các em học sinh và quý phụ huynh lịch trọng tâm trong 2 tuần tới:\n\n- Khối 10: Kiểm tra giữa kỳ môn Toán, Ngữ Văn và bài thực hành An toàn lao động tại xưởng.\n- Khối 11: Thi kết thúc mô-đun thực hành nghề chuyên ngành; hoàn thành đề cương ôn tập Văn hóa.\n- Khối 12: Khảo sát chất lượng đợt 1 các môn thi Tốt nghiệp THPT. Các em chú ý khung giờ tự học buổi tối từ 19h30 - 21h30 tại phòng KTX để ôn bài đạt kết quả cao nhất!"
+    },
+    {
+      "id": "news-3",
+      "category": "hoat-dong-ktx",
+      "categoryLabel": "Hoạt động KTX",
+      "date": "20/10/2026",
+      "tag": "[DỮ LIỆU MẪU - CÔ MAI HƯỜNG CẬP NHẬT]",
+      "title": "Tổng kết phong trào 'Phòng ở Ký túc xá Xanh - Sạch - Ấm áp như nhà mình'",
+      "summary": "Biểu dương các phòng nội trú gọn gàng, chăn màn gấp vuông vắn, đoàn kết giúp đỡ bạn mới xuống trường làm quen nếp sống tập thể.",
+      "content": "Trong tháng qua, các phòng nội trú của lớp cô Mai Hường đã thực hiện rất tốt nội quy Ký túc xá:\n\n- 100% phòng ở quét dọn sạch sẽ mỗi sáng trước khi lên giảng đường và xuống xưởng thực hành.\n- Các anh chị lớp 11, 12 đã nhiệt tình hướng dẫn các em lớp 10 mới xa bản làng cách đi chợ/ăn cơm nhà ăn tiết kiệm, cách bảo quản đồ dùng cá nhân.\n- Cô Hường khen ngợi tinh thần tự giác tắt thiết bị điện khi ra khỏi phòng và giữ trật tự giờ nghỉ trưa, tối."
+    },
+    {
+      "id": "news-4",
+      "category": "guong-sang",
+      "categoryLabel": "Gương sáng vùng cao",
+      "date": "18/10/2026",
+      "tag": "[DỮ LIỆU MẪU - CÔ MAI HƯỜNG CẬP NHẬT]",
+      "title": "Gương sáng nội trú: Tập thể Tổ 1 (Khối 10) vượt bỡ ngỡ đầu năm, đạt 100% giờ học tốt",
+      "summary": "Từ những ngày đầu xuống trường còn nhớ nhà, bỡ ngỡ, các em học sinh vùng cao Tổ 1 đã nhanh chóng hòa nhập, đi học đúng giờ và thực hành nghề rất khéo tay.",
+      "content": "Những ngày đầu nhập học, nhiều em ở các xã vùng núi cao cách trường hàng trăm cây số còn rụt rè, nhớ bố mẹ và chưa quen lịch học kết hợp giữa Văn hóa và Thực hành nghề.\n\nNhờ sự động viên sát sao mỗi tối của cô chủ nhiệm Mai Hường và sự đùm bọc của tập thể lớp, cả tổ đã lập nhóm đôi bạn cùng tiến: sáng gọi nhau dậy đúng 5h45, lên lớp ghi chép bài đầy đủ, vào xưởng thực hành nghiêm túc và cuối tuần gọi điện báo tin vui về cho gia đình!"
+    },
+    {
+      "id": "news-5",
+      "category": "guong-sang",
+      "categoryLabel": "Gương sáng vùng cao",
+      "date": "15/10/2026",
+      "tag": "[DỮ LIỆU MẪU - CÔ MAI HƯỜNG CẬP NHẬT]",
+      "title": "Vinh danh nhóm học sinh Khối 11 & 12 đạt điểm Giỏi bài thực hành tay nghề tại xưởng",
+      "summary": "Không chỉ chăm chỉ học Văn hóa buổi chiều, các em còn hoàn thành xuất sắc bài thực hành kỹ thuật tại xưởng và được thầy cô bộ môn khen ngợi.",
+      "content": "Học hệ vừa học văn hóa vừa học nghề tại Trường Cao đẳng Công nghiệp, Thương mại và Du lịch giúp các em rèn luyện đôi bàn tay khéo léo ngay từ năm lớp 10, 11, 12.\n\nTrong đợt đánh giá kỹ năng thực hành vừa qua, nhóm học sinh nội trú của lớp cô Mai Hường đã hoàn thành sản phẩm thực hành trước thời gian quy định, đảm bảo tuyệt đối an toàn lao động và độ chính xác kỹ thuật cao. Đây là niềm tự hào lớn gửi về cho bố mẹ nơi quê nhà!"
+    },
+    {
+      "id": "news-6",
+      "category": "thong-bao",
+      "categoryLabel": "Thông báo chung",
+      "date": "10/10/2026",
+      "tag": "[DỮ LIỆU MẪU - CÔ MAI HƯỜNG CẬP NHẬT]",
+      "title": "Hướng dẫn quy trình xin phép về thăm nhà dịp cuối tuần dành cho học sinh nội trú",
+      "summary": "Quy định bắt buộc để đảm bảo an toàn tuyệt đối khi học sinh từ Ký túc xá bắt xe về quê thăm gia đình và quay lại trường đúng giờ.",
+      "content": "Để đảm bảo an toàn giao thông và quản lý sĩ số nội trú chặt chẽ, cô Mai Hường nhắc nhở phụ huynh và các em quy trình xin phép về quê cuối tuần:\n\n1. Phụ huynh trực tiếp gọi điện hoặc nhắn Zalo số 0982.909.515 cho cô Mai Hường trước chiều thứ Sáu để xác nhận đón con.\n2. Học sinh viết giấy xin phép có chữ ký của cô chủ nhiệm trước khi nộp cho Ban quản lý Ký túc xá.\n3. Khi về đến nhà và khi lên xe quay lại trường vào chiều Chủ nhật, học sinh hoặc phụ huynh nhắn tin báo ngay cho cô Hường biết để cô yên tâm."
+    }
+  ],
+  "parentFaqs": [
+    {
+      "q": "1. Con từ vùng núi cao xuống ở Ký túc xá (KTX) có an toàn không? Buổi tối ai quản lý các cháu?",
+      "a": "Phụ huynh hoàn toàn yên tâm ạ! Ký túc xá của Trường Cao đẳng Công nghiệp, Thương mại và Du lịch có cổng bảo vệ trực 24/24, có cán bộ quản lý nội trú và cô chủ nhiệm Mai Hường thường xuyên kiểm tra, điểm danh vào 22h00 mỗi tối. Các em có khung giờ tự học buổi tối từ 19h30 - 21h30 và không được tự ý ra khỏi trường vào ban đêm."
+    },
+    {
+      "q": "2. Học hệ vừa học Văn hóa (lớp 10, 11, 12) vừa học Nghề có bị nặng quá không? Khi ra trường con nhận được những bằng cấp gì?",
+      "a": "Lịch học được nhà trường phân bổ rất khoa học và vừa sức: một buổi học các môn Văn hóa THPT cốt lõi, một buổi thực hành nghề thực tế tại xưởng (giúp các em đỡ căng thẳng lý thuyết). Sau 3 năm hoàn thành chương trình, các em vừa đủ điều kiện dự thi lấy Bằng Tốt nghiệp THPT Quốc gia, vừa nhận Bằng Trung cấp nghề chính quy để đi làm ngay hoặc học liên thông lên Cao đẳng rất thuận lợi."
+    },
+    {
+      "q": "3. Con ở nội trú ăn uống như thế nào? Chi phí sinh hoạt hàng tháng bố mẹ nên gửi thế nào cho hợp lý?",
+      "a": "Trong khuôn viên trường có căng-tin và khu dịch vụ ăn uống sạch sẽ, giá bình dân dành cho học sinh. Cô Mai Hường luôn hướng dẫn các em cách giữ thẻ ATM/tiền mặt an toàn, khuyên phụ huynh gửi tiền ăn theo từng tuần hoặc 2 tuần/lần để các em chi tiêu tiết kiệm, hợp lý, tránh tiêu xài lãng phí."
+    },
+    {
+      "q": "4. Khi bố mẹ ở quê muốn gửi đồ ăn, chăn ấm xuống trường hoặc muốn xin phép cho con về thăm nhà thì làm thế nào?",
+      "a": "Bố mẹ chỉ cần bấm nút Gọi điện hoặc Nhắn Zalo trực tiếp cho cô Mai Hường theo số 0982.909.515 trên trang web này. Nếu gửi đồ qua xe khách, bố mẹ báo biển số xe và giờ xe qua cổng trường để cô dặn con ra nhận. Nếu xin phép về quê, bố mẹ gọi trực tiếp cho cô để cô ký giấy ra cổng KTX và theo dõi cho đến khi con về tới nhà an toàn."
+    },
+    {
+      "q": "5. Chẳng may con bị ốm sốt, cảm cúm khi thay đổi thời tiết ở Ký túc xá thì ai chăm sóc?",
+      "a": "Ngay trong trường có Phòng Y tế chăm sóc sức khỏe ban đầu. Ngoài ra, các bạn cùng phòng KTX và ban cán sự lớp đều có số hotline 0982.909.515 của cô Mai Hường. Khi có em nào mệt, sốt, cô và y tế nhà trường sẽ kịp thời thăm khám, mua thuốc, nấu cháo ấm và thông báo ngay cho gia đình nắm được tình hình."
+    }
+  ]
+}

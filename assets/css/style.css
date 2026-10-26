@@ -1,0 +1,294 @@
+/* ==========================================================================
+   WEBSITE CÔNG TÁC GIÁO VIÊN CHỦ NHIỆM - CÔ GIÁO MAI HƯỜNG
+   Trường Cao đẳng Công nghiệp, Thương mại và Du lịch
+   Thiết kế: Tươi sáng, Ấm áp, Chữ To Rõ Nét (Accessibility-First)
+   ========================================================================== */
+
+:root {
+  /* Bảng màu Tươi sáng & Truyền cảm hứng */
+  --primary: #0284C7;
+  --primary-hover: #0369A1;
+  --primary-light: #E0F2FE;
+  --primary-border: #BAE6FD;
+
+  --accent-warm: #F59E0B;
+  --accent-warm-light: #FEF3C7;
+  --accent-warm-dark: #B45309;
+
+  --cta-vibrant: #EA580C;
+  --cta-vibrant-hover: #C2410C;
+  --cta-light: #FFEDD5;
+
+  --emerald: #10B981;
+  --emerald-dark: #047857;
+  --emerald-light: #D1FAE5;
+
+  --bg-main: #FFFDF9;
+  --bg-sky: #F0F9FF;
+  --bg-warm: #FEFCE8;
+  --bg-card: #FFFFFF;
+
+  --text-heading: #0F172A;
+  --text-body: #1E293B;
+  --text-muted: #334155;
+
+  --radius-card: 20px;
+  --radius-btn: 14px;
+  --shadow-soft: 0 10px 30px -5px rgba(2, 132, 199, 0.12);
+  --shadow-hover: 0 16px 36px -6px rgba(2, 132, 199, 0.2);
+
+  /* Hệ thống cỡ chữ cơ sở (Hỗ trợ phóng to A+ / A++) */
+  --base-font-size: 18px;
+}
+
+@media (min-width: 1024px) {
+  :root {
+    --base-font-size: 19px;
+  }
+}
+
+html.font-scale-normal {
+  font-size: var(--base-font-size);
+}
+
+html.font-scale-large {
+  font-size: calc(var(--base-font-size) * 1.12);
+}
+
+html.font-scale-xlarge {
+  font-size: calc(var(--base-font-size) * 1.25);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: var(--base-font-size);
+  scroll-behavior: smooth;
+  font-family: 'Be Vietnam Pro', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  line-height: 1.7;
+}
+
+body {
+  background-color: var(--bg-main);
+  color: var(--text-body);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Plus Jakarta Sans', 'Be Vietnam Pro', sans-serif;
+  color: var(--text-heading);
+  line-height: 1.3;
+}
+
+/* Các tiện ích thiết kế Thẻ & Nút bấm lớn cho Phụ huynh Vùng cao */
+.card-warm {
+  background: var(--bg-card);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow-soft);
+  border: 2px solid #E2E8F0;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.card-warm:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-border);
+}
+
+.btn-touch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  min-height: 3.25rem;
+  padding: 0.75rem 1.4rem;
+  border-radius: var(--radius-btn);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.btn-touch:active {
+  transform: scale(0.98);
+}
+
+.btn-cta-orange {
+  background: linear-gradient(135deg, #F97316 0%, #EA580C 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px -4px rgba(234, 88, 12, 0.45);
+}
+
+.btn-cta-orange:hover {
+  background: linear-gradient(135deg, #EA580C 0%, #C2410C 100%);
+  box-shadow: 0 12px 24px -4px rgba(234, 88, 12, 0.6);
+}
+
+.btn-zalo {
+  background: linear-gradient(135deg, #0EA5E9 0%, #0284C7 100%);
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.4);
+}
+
+.btn-zalo:hover {
+  background: linear-gradient(135deg, #0284C7 0%, #0369A1 100%);
+}
+
+.btn-facebook {
+  background: #1877F2;
+  color: #FFFFFF;
+  box-shadow: 0 8px 20px -4px rgba(24, 119, 242, 0.35);
+}
+
+.btn-facebook:hover {
+  background: #1D4ED8;
+}
+
+/* Nút chỉnh cỡ chữ A+ trên Header */
+.font-btn {
+  padding: 0.35rem 0.7rem;
+  border-radius: 10px;
+  font-weight: 700;
+  border: 2px solid #CBD5E1;
+  background: #FFFFFF;
+  color: var(--text-heading);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.font-btn.active {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+}
+
+/* Tab Khối Lớp 10 - 11 - 12 */
+.grade-tab {
+  padding: 0.75rem 1.35rem;
+  border-radius: 14px;
+  font-weight: 700;
+  border: 2px solid #CBD5E1;
+  background: #FFFFFF;
+  color: var(--text-heading);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.grade-tab.active {
+  background: var(--primary);
+  color: #FFFFFF;
+  border-color: var(--primary);
+  box-shadow: 0 8px 20px -4px rgba(2, 132, 199, 0.35);
+}
+
+/* Category Filter Buttons */
+.news-filter-btn {
+  padding: 0.6rem 1.15rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  border: 2px solid #CBD5E1;
+  background: #FFFFFF;
+  color: var(--text-heading);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.news-filter-btn.active {
+  background: var(--cta-vibrant);
+  color: #FFFFFF;
+  border-color: var(--cta-vibrant);
+}
+
+/* Checklist Ký túc xá */
+.ktx-check-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding: 1rem 1.15rem;
+  border-radius: 14px;
+  border: 2px solid #E2E8F0;
+  background: #FFFFFF;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.ktx-check-item:hover {
+  border-color: var(--primary);
+  background: var(--bg-sky);
+}
+
+.ktx-check-item.checked {
+  border-color: var(--emerald);
+  background: #ECFDF5;
+}
+
+.ktx-check-item input[type="checkbox"] {
+  width: 1.45rem;
+  height: 1.45rem;
+  margin-top: 0.15rem;
+  accent-color: var(--emerald);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+/* Khung ảnh chân dung Cô Mai Hường */
+.teacher-portrait-wrapper {
+  position: relative;
+  border-radius: 26px;
+  padding: 10px;
+  background: linear-gradient(135deg, #38BDF8 0%, #F59E0B 50%, #F97316 100%);
+  box-shadow: 0 20px 45px -10px rgba(2, 132, 199, 0.28);
+}
+
+.teacher-portrait-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 20px;
+  display: block;
+  background-color: #E0F2FE;
+}
+
+/* Floating Badges */
+.floating-badge {
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(8px);
+  border: 2px solid #BAE6FD;
+  border-radius: 16px;
+  padding: 0.65rem 1rem;
+  box-shadow: 0 12px 25px -5px rgba(15, 23, 42, 0.18);
+}
+
+/* Toast Notification */
+.toast-banner {
+  position: fixed;
+  bottom: 5.5rem;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: #0F172A;
+  color: #FFFFFF;
+  padding: 0.9rem 1.5rem;
+  border-radius: 14px;
+  font-weight: 700;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.25);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  max-width: 92vw;
+  text-align: center;
+}
+
+.toast-banner.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

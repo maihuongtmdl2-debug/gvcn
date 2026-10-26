@@ -1,0 +1,941 @@
+<!DOCTYPE html>
+<html lang="vi" class="font-scale-normal">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Đồng Hành Cùng Học Sinh Nội Trú – Cô Giáo Chủ Nhiệm Mai Hường | Trường CĐ Công nghiệp, Thương mại và Du lịch</title>
+  <meta name="description" content="Cổng thông tin kết nối Cô giáo chủ nhiệm Mai Hường với học sinh nội trú Khối 10, 11, 12 (Hệ vừa học văn hóa vừa học nghề) và phụ huynh vùng cao tại Trường Cao đẳng Công nghiệp, Thương mại và Du lịch." />
+
+  <!-- Google Fonts hỗ trợ tiếng Việt rõ nét: Be Vietnam Pro & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS v3.4.17 -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="min-h-screen flex flex-col selection:bg-sky-200 selection:text-sky-900">
+
+  <!-- THANH CÔNG CỤ TRỢ NĂNG DÀNH CHO PHỤ HUYNH VÙNG CAO & HỌC SINH (TOP BAR) -->
+  <div class="bg-sky-900 text-white py-2.5 px-4 border-b border-sky-800">
+    <div class="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-2 text-sm md:text-base font-bold">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-400 animate-pulse"></span>
+        <span>Trường Cao đẳng Công nghiệp, Thương mại và Du lịch – Hệ Văn Hóa &amp; Đào Tạo Nghề (Khối 10, 11, 12)</span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-2 md:gap-4">
+        <!-- Cụm nút Tăng cỡ chữ cho Phụ huynh dễ đọc -->
+        <div class="flex items-center gap-1.5 bg-sky-950/80 px-3 py-1 rounded-xl border border-sky-700" role="group" aria-label="Điều chỉnh cỡ chữ hiển thị">
+          <span class="text-xs md:text-sm font-bold text-amber-300 mr-1">🔍 Cỡ chữ:</span>
+          <button type="button" data-font-scale="normal" class="font-btn active text-xs md:text-sm" aria-pressed="true">Chữ vừa</button>
+          <button type="button" data-font-scale="large" class="font-btn text-xs md:text-sm" aria-pressed="false">Chữ TO (A+)</button>
+          <button type="button" data-font-scale="xlarge" class="font-btn text-xs md:text-sm" aria-pressed="false">RẤT TO (A++)</button>
+        </div>
+
+        <a href="tel:0982909515" class="inline-flex items-center gap-1.5 bg-amber-500 hover:bg-amber-400 text-slate-950 font-extrabold text-sm px-3.5 py-1.5 rounded-xl transition-colors">
+          📞 Gọi nhanh: 0982.909.515
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER & THANH ĐIỀU HƯỚNG DÍNH TRÊN CÙNG (STICKY HEADER) -->
+  <header class="sticky top-0 z-40 bg-white/95 backdrop-blur-md border-b-2 border-sky-100 shadow-sm">
+    <div class="max-w-7xl mx-auto px-4 py-3.5 flex items-center justify-between gap-4">
+      <!-- Logo & Tên Thương Hiệu Lớp Học -->
+      <a href="#hero" class="flex items-center gap-3 group focus:outline-none">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-sky-500 to-amber-500 p-0.5 shadow-md flex-shrink-0">
+          <img
+            src="a1.jpg"
+            onerror="this.onerror=null; this.src='assets/images/a1.jpg';"
+            alt="Cô giáo chủ nhiệm Mai Hường"
+            class="w-full h-full object-cover rounded-[14px]"
+          />
+        </div>
+        <div>
+          <span class="block text-xs font-extrabold uppercase tracking-wider text-sky-700">Giáo Viên Chủ Nhiệm</span>
+          <span class="block text-lg md:text-xl font-extrabold text-slate-900 group-hover:text-sky-700 transition-colors">Cô Giáo Mai Hường</span>
+        </div>
+      </a>
+
+      <!-- Menu trên Desktop -->
+      <nav class="hidden xl:flex items-center gap-1 font-bold text-slate-800" aria-label="Điều hướng chính">
+        <a href="#hero" class="px-3 py-2 rounded-xl hover:bg-sky-50 hover:text-sky-700 transition-colors">Trang chủ</a>
+        <a href="#about-teacher" class="px-3 py-2 rounded-xl hover:bg-sky-50 hover:text-sky-700 transition-colors">Cô Chủ Nhiệm</a>
+        <a href="#study-program" class="px-3 py-2 rounded-xl hover:bg-sky-50 hover:text-sky-700 transition-colors">Văn Hóa &amp; Nghề 10-11-12</a>
+        <a href="#dormitory-life" class="px-3 py-2 rounded-xl hover:bg-sky-50 hover:text-sky-700 transition-colors">Đời Sống KTX</a>
+        <a href="#news-board" class="px-3 py-2 rounded-xl hover:bg-sky-50 hover:text-sky-700 transition-colors">Bảng Tin</a>
+        <a href="#parent-corner" class="px-3 py-2 rounded-xl hover:bg-sky-50 hover:text-sky-700 transition-colors">Góc Phụ Huynh</a>
+        <a href="#contact-box" class="px-3 py-2 rounded-xl hover:bg-sky-50 hover:text-sky-700 transition-colors">Liên Hệ &amp; Tâm Sự</a>
+      </nav>
+
+      <!-- Nút Zalo/Gọi trên Header & Nút Hamburger Mobile -->
+      <div class="flex items-center gap-2.5">
+        <a href="https://zalo.me/0982909515" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex btn-touch btn-zalo !min-h-[2.75rem] !py-2 !px-4 !text-sm">
+          💬 Nhắn Zalo Cô Hường
+        </a>
+
+        <button
+          type="button"
+          id="mobileMenuBtn"
+          aria-expanded="false"
+          aria-controls="mobileNavDrawer"
+          class="xl:hidden inline-flex items-center justify-center p-2.5 rounded-xl border-2 border-slate-300 text-slate-900 hover:bg-sky-50 font-bold"
+          aria-label="Mở danh mục trang web"
+        >
+          <span class="text-base font-extrabold mr-1.5">Danh mục</span> ☰
+        </button>
+      </div>
+    </div>
+
+    <!-- Menu Drawer trên Điện thoại -->
+    <nav id="mobileNavDrawer" class="hidden xl:hidden bg-white border-t-2 border-sky-100 px-4 pt-3 pb-5 shadow-xl" aria-label="Điều hướng di động">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 font-bold text-slate-900">
+        <a href="#hero" class="p-3 rounded-xl bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2">🏠 1. Trang chủ</a>
+        <a href="#about-teacher" class="p-3 rounded-xl bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2">👩‍🏫 2. Cô Chủ Nhiệm Mai Hường</a>
+        <a href="#study-program" class="p-3 rounded-xl bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2">📚 3. Học Văn Hóa &amp; Nghề (10-11-12)</a>
+        <a href="#dormitory-life" class="p-3 rounded-xl bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2">🏡 4. Đời Sống Ký Túc Xá Nội Trú</a>
+        <a href="#news-board" class="p-3 rounded-xl bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2">📰 5. Bảng Tin &amp; Vinh Danh</a>
+        <a href="#parent-corner" class="p-3 rounded-xl bg-sky-50/70 hover:bg-sky-100 flex items-center gap-2">👨‍👩‍👧 6. Góc Phụ Huynh Vùng Cao</a>
+        <a href="#contact-box" class="p-3 rounded-xl bg-amber-100 text-amber-950 hover:bg-amber-200 flex items-center gap-2 sm:col-span-2">💌 7. Gửi Lời Nhắn / Xin Phép Cô Mai Hường</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="flex-1">
+    <!-- =======================================================================
+         KHU VỰC MÀN HÌNH ĐẦU TIÊN (HERO SECTION - ABOVE THE FOLD)
+         ======================================================================= -->
+    <section id="hero" class="relative overflow-hidden bg-gradient-to-br from-sky-50 via-amber-50/60 to-orange-50/50 py-10 md:py-16 border-b-2 border-sky-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+
+          <!-- Cột Trái (Thông điệp & 3 Nút Hành Động Cỡ Lớn) -->
+          <div class="lg:col-span-7 order-2 lg:order-1">
+            <div class="inline-flex flex-wrap items-center gap-2 px-4 py-2 rounded-2xl bg-sky-100 text-sky-900 border-2 border-sky-300 font-extrabold text-sm md:text-base mb-5 shadow-sm">
+              <span>🏫 Trường CĐ Công nghiệp, Thương mại và Du lịch</span>
+              <span class="text-sky-500">|</span>
+              <span class="text-orange-700">Hệ Văn Hóa &amp; Nghề (Khối 10 - 11 - 12)</span>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-5 leading-tight">
+              Ngôi Nhà Nội Trú Thứ Hai Của Học Sinh Vùng Cao – <span class="text-sky-700 underline decoration-amber-400 decoration-4 underline-offset-8">Lớp Học Cô Mai Hường</span>
+            </h1>
+
+            <p class="text-lg md:text-xl text-slate-800 font-medium mb-6 leading-relaxed bg-white/90 p-5 rounded-2xl border-2 border-sky-200 shadow-sm">
+              “Chào mừng các bậc phụ huynh và các em học sinh thân yêu! Dù các em từ bản làng núi cao xa xôi về học tập, tại mái trường này và trong khu Ký túc xá nội trú, <strong>cô Mai Hường</strong> luôn đồng hành cùng các em rèn đức, luyện tài, vững kiến thức văn hóa THPT và giỏi kỹ năng nghề.”
+            </p>
+
+            <!-- Slogan nổi bật -->
+            <div class="flex items-center gap-3 p-4 rounded-2xl bg-amber-100/90 border-2 border-amber-300 text-amber-950 font-bold mb-7">
+              <span class="text-2xl flex-shrink-0">🌟</span>
+              <p class="text-base md:text-lg">
+                “Từ núi cao về mái trường chung – Vững văn hóa, giỏi tay nghề, ấm áp tình yêu thương nội trú!”
+              </p>
+            </div>
+
+            <!-- Cụm 3 Nút Hành Động Lớn (Big Touch Buttons) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+              <a href="tel:0982909515" class="btn-touch btn-cta-orange text-lg py-4 px-6 w-full">
+                📞 Gọi Cô Mai Hường: 0982.909.515
+              </a>
+              <a href="https://zalo.me/0982909515" target="_blank" rel="noopener noreferrer" class="btn-touch btn-zalo text-lg py-4 px-6 w-full">
+                💬 Nhắn Zalo Với Cô (0982909515)
+              </a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <a href="https://www.facebook.com/huong.tn.34518" target="_blank" rel="noopener noreferrer" class="btn-touch btn-facebook text-base py-3.5 px-5 w-full">
+                🌐 Kết Nối Facebook Cô Chủ Nhiệm
+              </a>
+              <a href="#study-program" class="btn-touch bg-emerald-600 hover:bg-emerald-700 text-white text-base py-3.5 px-5 w-full shadow-md">
+                📅 Xem Lịch Học Văn Hóa - Nghề &amp; Nội Trú
+              </a>
+            </div>
+          </div>
+
+          <!-- Cột Phải (Chân dung Cô Giáo Chủ Nhiệm Mai Hường - a1.jpg) -->
+          <div class="lg:col-span-5 order-1 lg:order-2">
+            <div class="relative mx-auto max-w-md">
+              <div
+                class="teacher-portrait-wrapper cursor-pointer"
+                data-lightbox-src="a1.jpg"
+                data-lightbox-caption="Cô giáo chủ nhiệm Mai Hường – Trường Cao đẳng Công nghiệp, Thương mại và Du lịch (SĐT/Zalo: 0982.909.515)"
+                title="Bấm để xem ảnh lớn"
+              >
+                <img
+                  src="a1.jpg"
+                  onerror="this.onerror=null; this.src='assets/images/a1.jpg';"
+                  alt="Cô giáo chủ nhiệm Mai Hường - Trường Cao đẳng Công nghiệp, Thương mại và Du lịch"
+                  class="teacher-portrait-img"
+                />
+              </div>
+
+              <!-- Thẻ nổi 1 (Floating Badge 1) -->
+              <div class="floating-badge mt-4 sm:mt-0 sm:absolute sm:-bottom-5 sm:-left-4 z-10 flex items-center gap-3">
+                <span class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-xl font-bold flex-shrink-0">🏡</span>
+                <div>
+                  <p class="text-xs font-extrabold uppercase text-sky-800">Ngôi nhà thứ hai</p>
+                  <p class="text-sm md:text-base font-extrabold text-slate-900">Đồng hành cùng học sinh nội trú KTX</p>
+                </div>
+              </div>
+
+              <!-- Thẻ nổi 2 (Floating Badge 2) -->
+              <div class="floating-badge mt-3 sm:mt-0 sm:absolute sm:top-5 sm:-right-4 z-10 flex items-center gap-2.5">
+                <span class="w-9 h-9 rounded-xl bg-sky-600 text-white flex items-center justify-center text-lg font-bold flex-shrink-0">🎓</span>
+                <div>
+                  <p class="text-xs font-extrabold text-emerald-800">Hệ đào tạo kép</p>
+                  <p class="text-xs md:text-sm font-extrabold text-slate-900">Văn hóa (10, 11, 12) &amp; Đào tạo Nghề</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         MỤC 1: TÂM THƯ & GIỚI THIỆU CÔ GIÁO CHỦ NHIỆM MAI HƯỜNG (#about-teacher)
+         ======================================================================= -->
+    <section id="about-teacher" class="py-14 md:py-20 bg-white border-b-2 border-slate-200">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-amber-100 text-amber-900 font-extrabold text-sm border border-amber-300 mb-3">
+            ❤️ CẦU NỐI YÊU THƯƠNG GIỮA NHÀ TRƯỜNG &amp; BẢN LÀNG VÙNG CAO
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Tâm Thư Cô Giáo Chủ Nhiệm Mai Hường Gửi Phụ Huynh &amp; Các Em Học Sinh
+          </h2>
+          <p class="text-slate-700 font-medium">
+            Mỗi chuyến xe đưa các em từ vùng núi cao xuống trường là gửi gắm biết bao niềm tin và kỳ vọng của cha mẹ.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-12">
+          <!-- Khung thông tin xác thực Cô chủ nhiệm -->
+          <div class="lg:col-span-4 card-warm p-6 bg-gradient-to-b from-sky-50 to-white border-2 border-sky-200">
+            <div class="w-36 h-36 mx-auto mb-4 rounded-full p-1 bg-gradient-to-tr from-sky-500 to-amber-500 shadow-md">
+              <img
+                src="a1.jpg"
+                onerror="this.onerror=null; this.src='assets/images/a1.jpg';"
+                alt="Chân dung Cô giáo Mai Hường"
+                class="w-full h-full object-cover rounded-full"
+              />
+            </div>
+            <div class="text-center mb-5">
+              <h3 class="text-2xl font-extrabold text-slate-900">Cô Giáo Mai Hường</h3>
+              <p class="text-sky-800 font-bold mt-1">Giáo viên Chủ nhiệm Khối 10 - 11 - 12</p>
+              <p class="text-sm font-semibold text-slate-700 mt-1">Trường Cao đẳng Công nghiệp, Thương mại và Du lịch</p>
+            </div>
+
+            <div class="space-y-3 text-base border-t-2 border-sky-100 pt-4">
+              <div class="p-3 rounded-xl bg-white border border-slate-200">
+                <span class="block text-xs font-extrabold uppercase text-slate-500">Số điện thoại / Zalo trực tiếp:</span>
+                <a href="tel:0982909515" class="text-lg font-extrabold text-orange-700 hover:underline">0982.909.515 (0982909515)</a>
+              </div>
+              <div class="p-3 rounded-xl bg-white border border-slate-200">
+                <span class="block text-xs font-extrabold uppercase text-slate-500">Facebook chính thức:</span>
+                <a href="https://www.facebook.com/huong.tn.34518" target="_blank" rel="noopener noreferrer" class="font-bold text-sky-700 hover:underline break-all">
+                  facebook.com/huong.tn.34518
+                </a>
+              </div>
+              <div class="p-3 rounded-xl bg-emerald-50 border border-emerald-200 text-emerald-950 font-semibold text-sm">
+                ✅ Phụ huynh có thể gọi hoặc nhắn Zalo bất cứ khi nào cần hỏi thăm việc học và sinh hoạt KTX của con.
+              </div>
+            </div>
+          </div>
+
+          <!-- Bức tâm thư ấm áp -->
+          <div class="lg:col-span-8 card-warm p-6 sm:p-8 md:p-10 bg-amber-50/40 border-2 border-amber-200">
+            <h3 class="text-xl md:text-2xl font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+              <span>💌</span> Lời Nhắn Nhủ Chân Thành Từ Cô Mai Hường
+            </h3>
+            <div class="space-y-4 text-slate-800 font-medium leading-relaxed">
+              <p>
+                <strong>Kính gửi các bậc phụ huynh nơi bản làng vùng cao và các em học sinh khối 10, 11, 12 thân mến!</strong>
+              </p>
+              <p>
+                Cô hiểu rằng, ở tuổi 15 – 18, khi rời vòng tay bố mẹ từ những bản làng vùng núi cao xa xôi để xuống học tập tại <strong>Trường Cao đẳng Công nghiệp, Thương mại và Du lịch</strong>, các em không tránh khỏi những đêm đầu nhớ nhà, bỡ ngỡ với nhịp sống Ký túc xá và lo lắng trước chương trình vừa học Văn hóa THPT vừa học Thực hành nghề.
+              </p>
+              <p>
+                Cũng như các bậc làm cha làm mẹ ở quê xa, mỗi khi trời trở gió hay đến kỳ thi cử, bố mẹ luôn mong ngóng biết con mình ăn ở có đủ ấm không, học văn hóa có theo kịp bài không, vào xưởng thực hành nghề có an toàn và tiến bộ không.
+              </p>
+              <p>
+                Chính vì vậy, cô Mai Hường lập trang thông tin này như một <strong>“Ngôi nhà chung trực tuyến”</strong> – nơi chữ viết to, rõ ràng, dễ bấm nhất để bố mẹ dù ở vùng cao sóng yếu vẫn dễ dàng theo dõi lịch học của con, và chỉ cần chạm nhẹ vào màn hình là gọi hoặc nhắn Zalo trực tiếp cho cô theo số <strong>0982.909.515</strong>.
+              </p>
+              <p class="font-bold text-sky-900 bg-sky-100/80 p-4 rounded-xl border border-sky-300">
+                “Các em hãy yên tâm học tập và rèn luyện nhé! Ở trường có thầy cô, có bạn bè và luôn có cô Mai Hường lắng nghe, nâng đỡ các em trưởng thành mỗi ngày!”
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 Cam kết đồng hành của Cô chủ nhiệm -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="card-warm p-6 bg-sky-50/60 border-2 border-sky-200">
+            <div class="w-14 h-14 rounded-2xl bg-sky-600 text-white flex items-center justify-center text-2xl font-bold mb-4 shadow-md">
+              1
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">
+              Sát Sao Học Văn Hóa &amp; Học Nghề
+            </h3>
+            <p class="text-slate-800 font-medium">
+              Theo dõi chuyên cần từng buổi học trên giảng đường và tại xưởng thực hành; hướng dẫn phương pháp học phù hợp cho từng khối lớp 10, 11, 12 để các em vững cả kiến thức lẫn tay nghề.
+            </p>
+          </div>
+
+          <div class="card-warm p-6 bg-amber-50/60 border-2 border-amber-200">
+            <div class="w-14 h-14 rounded-2xl bg-amber-500 text-white flex items-center justify-center text-2xl font-bold mb-4 shadow-md">
+              2
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">
+              Chăm Lo Đời Sống Nội Trú Ký Túc Xá
+            </h3>
+            <p class="text-slate-800 font-medium">
+              Thường xuyên thăm phòng ở KTX, hướng dẫn các em nề nếp sinh hoạt, giữ gìn vệ sinh, an toàn điện nước, chăm sóc sức khỏe khi trái gió trở trời và giúp học sinh mới hòa nhập nhanh.
+            </p>
+          </div>
+
+          <div class="card-warm p-6 bg-emerald-50/60 border-2 border-emerald-200">
+            <div class="w-14 h-14 rounded-2xl bg-emerald-600 text-white flex items-center justify-center text-2xl font-bold mb-4 shadow-md">
+              3
+            </div>
+            <h3 class="text-xl font-extrabold text-slate-900 mb-2">
+              Cầu Nối Thông Suốt Với Gia Đình
+            </h3>
+            <p class="text-slate-800 font-medium">
+              Cập nhật kịp thời tình hình rèn luyện, kết quả học tập định kỳ và quản lý chặt chẽ việc xin phép về quê cuối tuần để bố mẹ ở vùng núi xa luôn an lòng.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         MỤC 2: CHUYÊN MỤC HỌC TẬP – VỪA HỌC VĂN HÓA VỪA HỌC NGHỀ (#study-program)
+         ======================================================================= -->
+    <section id="study-program" class="py-14 md:py-20 bg-sky-50/70 border-b-2 border-sky-100">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-10">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-sky-200 text-sky-950 font-extrabold text-sm border border-sky-300 mb-3">
+            📘 LỘ TRÌNH KÉP: VỮNG VĂN HÓA THPT – GIỎI KỸ NĂNG NGHỀ
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Chương Trình Học Văn Hóa &amp; Học Nghề Khối 10, 11, 12
+          </h2>
+          <p class="text-slate-800 font-medium">
+            Bấm chọn từng khối lớp bên dưới để xem trọng tâm học tập và thời gian biểu mẫu trong ngày của học sinh nội trú.
+          </p>
+        </div>
+
+        <!-- Bộ lọc Tab tương tác theo Khối lớp -->
+        <div class="flex flex-wrap items-center justify-center gap-3 mb-10" role="tablist" aria-label="Bộ lọc chương trình học theo khối lớp">
+          <button type="button" data-grade-tab="all" class="grade-tab active">
+            🌟 Tất cả các khối (10 - 11 - 12)
+          </button>
+          <button type="button" data-grade-tab="10" class="grade-tab">
+            🌱 Khối Lớp 10 – Làm quen &amp; Nền tảng
+          </button>
+          <button type="button" data-grade-tab="11" class="grade-tab">
+            ⚡ Khối Lớp 11 – Tăng tốc &amp; Rèn nghề
+          </button>
+          <button type="button" data-grade-tab="12" class="grade-tab">
+            🏆 Khối Lớp 12 – Về đích THPT &amp; Vững tay nghề
+          </button>
+        </div>
+
+        <!-- Danh sách khối lớp được render động từ main.js -->
+        <div id="studyProgramContainer" class="space-y-8"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         MỤC 3: NGÔI NHÀ NỘI TRÚ KÝ TÚC XÁ & CẨM NANG SỐNG XA NHÀ (#dormitory-life)
+         ======================================================================= -->
+    <section id="dormitory-life" class="py-14 md:py-20 bg-amber-50/50 border-b-2 border-amber-200">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-amber-200 text-amber-950 font-extrabold text-sm border border-amber-400 mb-3">
+            🏡 NGÔI NHÀ NỘI TRÚ ẤM ÁP TÌNH THẦY TRÒ &amp; BÈ BẠN
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Đời Sống Ký Túc Xá &amp; Cẩm Nang Sống Xa Nhà Cho Học Sinh Vùng Cao
+          </h2>
+          <p class="text-slate-800 font-medium">
+            Rèn nếp sống tự lập, gọn gàng, an toàn và đoàn kết yêu thương nhau dưới mái nhà nội trú Trường Cao đẳng Công nghiệp, Thương mại và Du lịch.
+          </p>
+        </div>
+
+        <!-- Thư viện Hình ảnh Minh họa Học tập & Nội trú (Có Lightbox phóng to) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div
+            class="card-warm overflow-hidden bg-white cursor-pointer group"
+            data-lightbox-src="assets/images/workshop.jpg"
+            data-lightbox-caption="[Ảnh minh họa - Cô Mai Hường có thể thay bằng ảnh chụp thực tế của lớp và KTX] Giờ học thực hành nghề sôi nổi, an toàn tại xưởng thực hành nhà trường."
+          >
+            <div class="relative overflow-hidden aspect-video bg-slate-100">
+              <img
+                src="assets/images/workshop.jpg"
+                alt="Minh họa giờ học thực hành nghề tại xưởng"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <span class="absolute top-3 left-3 bg-slate-900/85 text-amber-300 text-xs font-extrabold px-3 py-1.5 rounded-lg">
+                🔍 Bấm vào ảnh để phóng to
+              </span>
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-extrabold text-amber-800 bg-amber-100 inline-block px-2.5 py-1 rounded mb-2">
+                [Ảnh minh họa - Cô Mai Hường có thể thay bằng ảnh chụp thực tế của lớp và KTX]
+              </p>
+              <h3 class="text-lg font-extrabold text-slate-900">
+                Giờ Thực Hành Nghề Rèn Tay Nghề Vững Vàng Tại Xưởng
+              </h3>
+              <p class="text-slate-700 text-sm mt-1">
+                Học đi đôi với hành giúp các em học sinh vùng cao tự tin làm chủ thiết bị, kỹ thuật ngay từ năm lớp 10, 11, 12.
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="card-warm overflow-hidden bg-white cursor-pointer group"
+            data-lightbox-src="assets/images/dormitory.jpg"
+            data-lightbox-caption="[Ảnh minh họa - Cô Mai Hường có thể thay bằng ảnh chụp thực tế của lớp và KTX] Không gian phòng ở Ký túc xá gọn gàng, ấm áp, có góc tự học buổi tối."
+          >
+            <div class="relative overflow-hidden aspect-video bg-slate-100">
+              <img
+                src="assets/images/dormitory.jpg"
+                alt="Minh họa phòng ở nội trú Ký túc xá gọn gàng sạch đẹp"
+                loading="lazy"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+              />
+              <span class="absolute top-3 left-3 bg-slate-900/85 text-amber-300 text-xs font-extrabold px-3 py-1.5 rounded-lg">
+                🔍 Bấm vào ảnh để phóng to
+              </span>
+            </div>
+            <div class="p-5">
+              <p class="text-xs font-extrabold text-amber-800 bg-amber-100 inline-block px-2.5 py-1 rounded mb-2">
+                [Ảnh minh họa - Cô Mai Hường có thể thay bằng ảnh chụp thực tế của lớp và KTX]
+              </p>
+              <h3 class="text-lg font-extrabold text-slate-900">
+                Góc Phòng Ở Nội Trú Ký Túc Xá Ngăn Nắp, Sạch Đẹp
+              </h3>
+              <p class="text-slate-700 text-sm mt-1">
+                Mỗi phòng KTX là một gia đình nhỏ: chăn màn gấp vuông vắn, góc học tập sáng sủa và bạn bè đùm bọc nhau.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Checklist tương tác Hành trang & Nề nếp Nội trú -->
+          <div class="lg:col-span-7 card-warm p-6 sm:p-8 bg-white">
+            <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+              <div>
+                <span class="text-xs font-extrabold uppercase tracking-wider text-emerald-800 bg-emerald-100 px-3 py-1 rounded-full">
+                  Tự kiểm tra mỗi ngày
+                </span>
+                <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mt-2">
+                  ✅ Checklist Hành Trang &amp; Nề Nếp Nội Trú KTX
+                </h3>
+              </div>
+              <div class="flex items-center gap-2">
+                <button type="button" id="checkAllKtxBtn" class="px-3.5 py-2 rounded-xl text-sm font-extrabold bg-emerald-100 hover:bg-emerald-200 text-emerald-900 transition-colors cursor-pointer">
+                  Chọn tất cả
+                </button>
+                <button type="button" id="resetKtxChecklistBtn" class="px-3.5 py-2 rounded-xl text-sm font-extrabold bg-slate-200 hover:bg-slate-300 text-slate-800 transition-colors cursor-pointer">
+                  Đặt lại
+                </button>
+              </div>
+            </div>
+
+            <p class="text-slate-700 mb-4 font-medium">
+              Các em học sinh hãy bấm tích chọn vào từng mục dưới đây để tự rèn luyện thói quen tốt tại Ký túc xá (trạng thái được lưu tự động trên máy của em):
+            </p>
+
+            <!-- Thanh tiến độ % hoàn thành -->
+            <div class="mb-6 bg-slate-100 p-4 rounded-2xl border border-slate-200">
+              <div class="flex items-center justify-between font-extrabold text-slate-900 mb-2">
+                <span id="ktxProgressText">Đã hoàn thành: 0/7 mục (0%)</span>
+                <span class="text-emerald-700 text-sm">🌟 Cố gắng đạt 100% nhé!</span>
+              </div>
+              <div class="w-full h-4 bg-slate-200 rounded-full overflow-hidden">
+                <div id="ktxProgressBar" class="h-full bg-gradient-to-r from-sky-500 to-emerald-500 transition-all duration-300" style="width: 0%"></div>
+              </div>
+            </div>
+
+            <div id="ktxChecklistContainer" class="space-y-3"></div>
+          </div>
+
+          <!-- Cẩm nang vượt qua nỗi nhớ nhà & Kỹ năng sống KTX -->
+          <div class="lg:col-span-5 space-y-6">
+            <div class="card-warm p-6 bg-gradient-to-br from-amber-50 to-orange-50 border-2 border-amber-300">
+              <h3 class="text-xl font-extrabold text-slate-900 mb-3 flex items-center gap-2">
+                <span>🌻</span> Bí Quyết Vượt Qua Nỗi Nhớ Nhà Khi Mới Xuống Trường
+              </h3>
+              <ul class="space-y-3 text-slate-800 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <span class="font-extrabold text-orange-600">1.</span>
+                  <span><strong>Mở lòng trò chuyện cùng bạn cùng phòng:</strong> Các bạn đều từ các huyện vùng cao về học chung, hãy cùng nhau đi ăn cơm, cùng học bài tối và chia sẻ chuyện quê mình.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="font-extrabold text-orange-600">2.</span>
+                  <span><strong>Tham gia thể thao buổi chiều (17h15 - 18h30):</strong> Đánh cầu lông, bóng chuyền hoặc đi bộ quanh sân trường giúp tinh thần sảng khoái, ăn ngon và ngủ sâu giấc.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="font-extrabold text-orange-600">3.</span>
+                  <span><strong>Tìm gặp cô Mai Hường bất cứ khi nào buồn:</strong> Phòng làm việc và số Zalo <strong>0982.909.515</strong> của cô luôn mở để lắng nghe và tháo gỡ mọi khó khăn cho các em.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="card-warm p-6 bg-white border-2 border-sky-200">
+              <h3 class="text-xl font-extrabold text-slate-900 mb-3 flex items-center gap-2">
+                <span>💰</span> Quản Lý Chi Tiêu &amp; Bảo Vệ Sức Khỏe Giao Mùa
+              </h3>
+              <ul class="space-y-3 text-slate-800 font-medium">
+                <li class="flex items-start gap-2.5">
+                  <span class="text-sky-700 font-extrabold">✔</span>
+                  <span><strong>Chi tiêu thông minh:</strong> Ưu tiên tiền ăn đủ 3 bữa Sáng - Trưa - Tối; ghi chép các khoản mua đồ dùng học tập; tuyệt đối không vay mượn tiền hoặc nạp game.</span>
+                </li>
+                <li class="flex items-start gap-2.5">
+                  <span class="text-sky-700 font-extrabold">✔</span>
+                  <span><strong>Chăm sóc sức khỏe:</strong> Uống nước ấm, mặc đủ ấm khi sương lạnh buổi sáng, giữ phòng ở thông thoáng và báo ngay cho cô Hường khi có dấu hiệu sốt, ho, mệt mỏi.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         MỤC 4: BẢNG TIN LỚP HỌC & GÓC VINH DANH HỌC SINH VƯỢT KHÓ (#news-board)
+         ======================================================================= -->
+    <section id="news-board" class="py-14 md:py-20 bg-white border-b-2 border-slate-200">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-8">
+          <div>
+            <span class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-900 font-extrabold text-sm border border-orange-300 mb-3">
+              📰 BẢNG TIN CHỦ NHIỆM &amp; GƯƠNG SÁNG NỘI TRÚ
+            </span>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900">
+              Thông Báo Tuần &amp; Vinh Danh Học Sinh Vùng Cao Vượt Khó
+            </h2>
+          </div>
+          <span id="newsCountBadge" class="inline-flex items-center px-4 py-2 rounded-xl bg-sky-100 text-sky-900 font-extrabold text-sm self-start md:self-auto">
+            Hiển thị 6 bản tin
+          </span>
+        </div>
+
+        <!-- Thanh Tìm kiếm & Bộ lọc Danh mục -->
+        <div class="card-warm p-5 bg-sky-50/70 border-2 border-sky-200 mb-8">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-4 items-center">
+            <div class="lg:col-span-5">
+              <label for="newsSearchInput" class="block text-sm font-extrabold text-slate-800 mb-1.5">
+                🔎 Tìm kiếm thông báo hoặc cẩm nang:
+              </label>
+              <input
+                type="search"
+                id="newsSearchInput"
+                placeholder="Nhập từ khóa (VD: Ký túc xá, lịch thi, về quê, khối 10...)"
+                class="w-full px-4 py-3 rounded-xl border-2 border-slate-300 focus:border-sky-600 focus:outline-none font-semibold text-slate-900 bg-white"
+              />
+            </div>
+
+            <div class="lg:col-span-7">
+              <span class="block text-sm font-extrabold text-slate-800 mb-1.5">
+                🗂️ Lọc theo chuyên mục:
+              </span>
+              <div class="flex flex-wrap gap-2">
+                <button type="button" data-news-cat="all" class="news-filter-btn active">Tất cả</button>
+                <button type="button" data-news-cat="thong-bao" class="news-filter-btn">Thông báo chung</button>
+                <button type="button" data-news-cat="hoc-tap" class="news-filter-btn">Lịch thi &amp; Học tập</button>
+                <button type="button" data-news-cat="hoat-dong-ktx" class="news-filter-btn">Hoạt động KTX</button>
+                <button type="button" data-news-cat="guong-sang" class="news-filter-btn">Gương sáng vùng cao</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Lưới hiển thị các thẻ thông báo -->
+        <div id="newsGridContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         MỤC 5: CỔNG KẾT NỐI DÀNH RIÊNG CHO PHỤ HUYNH VÙNG CAO (#parent-corner)
+         ======================================================================= -->
+    <section id="parent-corner" class="py-14 md:py-20 bg-gradient-to-b from-sky-50 to-amber-50/40 border-b-2 border-sky-200">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="text-center max-w-3xl mx-auto mb-12">
+          <span class="inline-block px-4 py-1.5 rounded-full bg-emerald-100 text-emerald-900 font-extrabold text-sm border border-emerald-300 mb-3">
+            👨‍👩‍👧 DÀNH RIÊNG CHO PHỤ HUYNH HỌC SINH Ở XA
+          </span>
+          <h2 class="text-2xl sm:text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
+            Góc Phụ Huynh Vùng Cao – Kết Nối Trực Tiếp Cùng Cô Mai Hường
+          </h2>
+          <p class="text-slate-800 font-medium">
+            Hướng dẫn rõ ràng, chữ to dễ đọc giúp bố mẹ ở quê nắm bắt mọi thông tin và phối hợp cùng cô chủ nhiệm chăm lo cho con.
+          </p>
+        </div>
+
+        <!-- 4 Tình huống Phụ huynh cần liên hệ ngay với Cô chủ nhiệm -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 mb-12">
+          <div class="card-warm p-6 bg-white border-t-4 border-t-orange-500">
+            <div class="text-3xl mb-3">🚌</div>
+            <h3 class="text-lg font-extrabold text-slate-900 mb-2">1. Xin phép về quê / Nghỉ học</h3>
+            <p class="text-slate-700 font-medium text-base">
+              Trước khi cho con bắt xe về quê dịp cuối tuần hoặc xin nghỉ ốm, bố mẹ gọi điện trực tiếp số <strong>0982.909.515</strong> xác nhận với cô Hường.
+            </p>
+          </div>
+
+          <div class="card-warm p-6 bg-white border-t-4 border-t-sky-500">
+            <div class="text-3xl mb-3">📦</div>
+            <h3 class="text-lg font-extrabold text-slate-900 mb-2">2. Gửi đồ từ quê xuống KTX</h3>
+            <p class="text-slate-700 font-medium text-base">
+              Khi gửi chăn ấm, quần áo, quà quê qua xe khách, bố mẹ nhắn Zalo cho cô biết giờ xe đến để cô hướng dẫn con ra cổng nhận an toàn.
+            </p>
+          </div>
+
+          <div class="card-warm p-6 bg-white border-t-4 border-t-emerald-500">
+            <div class="text-3xl mb-3">🩺</div>
+            <h3 class="text-lg font-extrabold text-slate-900 mb-2">3. Lưu ý sức khỏe đặc biệt</h3>
+            <p class="text-slate-700 font-medium text-base">
+              Nếu con có tiền sử dị ứng thuốc, say xe hoặc cần chế độ chăm sóc sức khỏe riêng tại KTX, bố mẹ báo trước để cô Mai Hường lưu tâm.
+            </p>
+          </div>
+
+          <div class="card-warm p-6 bg-white border-t-4 border-t-amber-500">
+            <div class="text-3xl mb-3">📊</div>
+            <h3 class="text-lg font-extrabold text-slate-900 mb-2">4. Trao đổi kết quả học tập</h3>
+            <p class="text-slate-700 font-medium text-base">
+              Định kỳ hàng tháng và cuối mỗi học kỳ, cô Hường cập nhật điểm Văn hóa, điểm Thực hành nghề và nề nếp nội trú tới từng gia đình.
+            </p>
+          </div>
+        </div>
+
+        <!-- Câu hỏi thường gặp của Phụ huynh (FAQ Accordion) -->
+        <div class="max-w-4xl mx-auto">
+          <h3 class="text-2xl font-extrabold text-slate-900 mb-6 text-center">
+            ❓ Giải Đáp Các Câu Hỏi Thường Gặp Của Phụ Huynh Vùng Cao
+          </h3>
+          <div id="parentFaqContainer" class="space-y-4"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         MỤC 6: HỘP THƯ TÂM SỰ & KẾT NỐI NHANH VỚI CÔ MAI HƯỜNG (#contact-box)
+         ======================================================================= -->
+    <section id="contact-box" class="py-14 md:py-20 bg-white">
+      <div class="max-w-7xl mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+
+          <!-- Cột Trái: Thẻ Liên hệ Trực tiếp 1 Chạm -->
+          <div class="lg:col-span-5 space-y-6">
+            <span class="inline-block px-4 py-1.5 rounded-full bg-orange-100 text-orange-900 font-extrabold text-sm border border-orange-300">
+              📞 LIÊN HỆ TRỰC TIẾP 1 CHẠM
+            </span>
+            <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900">
+              Kết Nối Ngay Với Cô Chủ Nhiệm Mai Hường
+            </h2>
+            <p class="text-slate-800 font-medium">
+              Phụ huynh và các em học sinh có thể bấm trực tiếp vào các nút lớn bên dưới để gọi điện, nhắn Zalo hoặc vào Facebook của cô Mai Hường:
+            </p>
+
+            <div class="card-warm p-6 bg-sky-50 border-2 border-sky-200 space-y-4">
+              <div class="flex items-center gap-4">
+                <img
+                  src="a1.jpg"
+                  onerror="this.onerror=null; this.src='assets/images/a1.jpg';"
+                  alt="Cô giáo Mai Hường"
+                  class="w-20 h-20 rounded-2xl object-cover border-2 border-sky-400 flex-shrink-0"
+                />
+                <div>
+                  <h3 class="text-xl font-extrabold text-slate-900">Cô Giáo Mai Hường</h3>
+                  <p class="text-sm font-bold text-sky-800">GVCN Khối 10, 11, 12 – Văn hóa &amp; Nghề</p>
+                  <p class="text-xs font-semibold text-slate-600">Trường CĐ Công nghiệp, Thương mại và Du lịch</p>
+                </div>
+              </div>
+
+              <a href="tel:0982909515" class="btn-touch btn-cta-orange w-full text-lg py-4">
+                📞 Bấm Gọi Điện: 0982.909.515
+              </a>
+
+              <a href="https://zalo.me/0982909515" target="_blank" rel="noopener noreferrer" class="btn-touch btn-zalo w-full text-lg py-4">
+                💬 Mở Zalo Nhắn Cô: 0982909515
+              </a>
+
+              <a href="https://www.facebook.com/huong.tn.34518" target="_blank" rel="noopener noreferrer" class="btn-touch btn-facebook w-full text-base py-3.5">
+                🌐 Mở Facebook Cô Mai Hường
+              </a>
+            </div>
+          </div>
+
+          <!-- Cột Phải: Biểu mẫu Soạn Tin Nhắn Nhanh qua Zalo / SMS -->
+          <div class="lg:col-span-7 card-warm p-6 sm:p-8 md:p-10 bg-amber-50/40 border-2 border-amber-200">
+            <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 mb-2">
+              ✍️ Gửi Lời Nhắn / Xin Phép / Tâm Sự Cùng Cô Mai Hường
+            </h3>
+            <p class="text-slate-700 font-medium mb-6">
+              Điền thông tin bên dưới, hệ thống sẽ tự động soạn sẵn tin nhắn đầy đủ và chuyển thẳng sang Zalo hoặc Tin nhắn SMS tới số <strong>0982.909.515</strong> của cô.
+            </p>
+
+            <form id="quickContactForm" onsubmit="return false;" class="space-y-4">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="senderRole" class="block font-extrabold text-slate-900 mb-1.5">
+                    1. Bạn là ai?
+                  </label>
+                  <select id="senderRole" class="w-full px-4 py-3 rounded-xl border-2 border-slate-300 bg-white font-bold text-slate-900 focus:border-sky-600 focus:outline-none">
+                    <option value="Phụ huynh học sinh">👨‍👩‍👧 Tôi là Phụ huynh học sinh</option>
+                    <option value="Học sinh nội trú">🎒 Em là Học sinh của lớp</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="studentGrade" class="block font-extrabold text-slate-900 mb-1.5">
+                    2. Học sinh thuộc Khối lớp nào?
+                  </label>
+                  <select id="studentGrade" class="w-full px-4 py-3 rounded-xl border-2 border-slate-300 bg-white font-bold text-slate-900 focus:border-sky-600 focus:outline-none">
+                    <option value="Khối Lớp 10 (Văn hóa & Nghề)">Khối Lớp 10 (Văn hóa &amp; Nghề)</option>
+                    <option value="Khối Lớp 11 (Văn hóa & Nghề)">Khối Lớp 11 (Văn hóa &amp; Nghề)</option>
+                    <option value="Khối Lớp 12 (Văn hóa & Nghề)">Khối Lớp 12 (Văn hóa &amp; Nghề)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="studentName" class="block font-extrabold text-slate-900 mb-1.5">
+                    3. Họ và tên học sinh <span class="text-red-600">*</span>
+                  </label>
+                  <input
+                    type="text"
+                    id="studentName"
+                    required
+                    placeholder="VD: Hoàng Văn An"
+                    class="w-full px-4 py-3 rounded-xl border-2 border-slate-300 bg-white font-semibold text-slate-900 focus:border-sky-600 focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label for="dormRoom" class="block font-extrabold text-slate-900 mb-1.5">
+                    4. Số phòng Ký túc xá (nếu nhớ)
+                  </label>
+                  <input
+                    type="text"
+                    id="dormRoom"
+                    placeholder="VD: Phòng 204 - KTX"
+                    class="w-full px-4 py-3 rounded-xl border-2 border-slate-300 bg-white font-semibold text-slate-900 focus:border-sky-600 focus:outline-none"
+                  />
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="senderPhone" class="block font-extrabold text-slate-900 mb-1.5">
+                    5. Số điện thoại của Phụ huynh / Học sinh
+                  </label>
+                  <input
+                    type="tel"
+                    id="senderPhone"
+                    placeholder="Nhập SĐT để cô gọi lại..."
+                    class="w-full px-4 py-3 rounded-xl border-2 border-slate-300 bg-white font-semibold text-slate-900 focus:border-sky-600 focus:outline-none"
+                  />
+                </div>
+
+                <div>
+                  <label for="messageTopic" class="block font-extrabold text-slate-900 mb-1.5">
+                    6. Việc cần trao đổi với Cô Hường
+                  </label>
+                  <select id="messageTopic" class="w-full px-4 py-3 rounded-xl border-2 border-slate-300 bg-white font-bold text-slate-900 focus:border-sky-600 focus:outline-none">
+                    <option value="Hỏi thăm tình hình học tập & nội trú KTX">Hỏi thăm việc học &amp; ở KTX</option>
+                    <option value="Xin phép cho con về thăm nhà cuối tuần">Xin phép về thăm nhà cuối tuần</option>
+                    <option value="Xin phép nghỉ ốm / Báo tình hình sức khỏe">Xin phép nghỉ ốm / Báo sức khỏe</option>
+                    <option value="Nhờ cô hướng dẫn nhận đồ gửi từ quê xuống">Nhắn nhận đồ gửi từ quê xuống</option>
+                    <option value="Tâm sự / Nhờ cô tư vấn việc học nghề & văn hóa">Tâm sự / Nhờ cô tư vấn</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="messageContent" class="block font-extrabold text-slate-900 mb-1.5">
+                  7. Nội dung chi tiết lời nhắn gửi Cô Mai Hường <span class="text-red-600">*</span>
+                </label>
+                <textarea
+                  id="messageContent"
+                  rows="4"
+                  required
+                  placeholder="Nhập nội dung cần nhắn cô Mai Hường (VD: Gia đình xin phép cho cháu chiều thứ Sáu về quê, chiều Chủ nhật cháu có mặt tại KTX ạ...)"
+                  class="w-full px-4 py-3 rounded-xl border-2 border-slate-300 bg-white font-semibold text-slate-900 focus:border-sky-600 focus:outline-none"
+                ></textarea>
+              </div>
+
+              <!-- Khung xem trước nội dung tự động -->
+              <div class="p-4 rounded-xl bg-white border-2 border-dashed border-sky-300 text-sm">
+                <span class="block font-extrabold text-sky-900 mb-1">📄 Xem trước nội dung tin nhắn tự động:</span>
+                <p id="messagePreviewBox" class="text-slate-700 font-medium italic">
+                  Kính gửi cô Mai Hường (0982.909.515) - Vui lòng nhập tên học sinh và nội dung ở trên...
+                </p>
+              </div>
+
+              <!-- Khung thông báo thành công -->
+              <div id="contactSuccessNotice" class="hidden p-4 rounded-xl bg-emerald-100 border-2 border-emerald-400"></div>
+
+              <!-- Cụm nút Gửi qua Zalo / Gửi SMS / Sao chép -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                <button type="button" id="sendZaloBtn" class="btn-touch btn-zalo w-full text-base py-4">
+                  💬 Soạn &amp; Gửi Qua Zalo Cho Cô
+                </button>
+                <button type="button" id="sendSmsBtn" class="btn-touch btn-cta-orange w-full text-base py-4">
+                  📲 Gửi Tin Nhắn SMS Cho Cô
+                </button>
+              </div>
+
+              <button type="button" id="copyMessageOnlyBtn" class="btn-touch w-full bg-slate-100 hover:bg-slate-200 text-slate-800 border-2 border-slate-300 text-sm py-2.5">
+                📋 Chỉ sao chép nội dung tin nhắn vào bộ nhớ máy
+              </button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =======================================================================
+       CHÂN TRANG (FOOTER 3 CỘT ẤM ÁP, RÕ RÀNG)
+       ======================================================================= -->
+  <footer class="bg-slate-900 text-slate-100 pt-14 pb-24 md:pb-14 border-t-4 border-amber-500">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 pb-10 border-b border-slate-700">
+        <!-- Cột 1: Thông tin Lớp chủ nhiệm -->
+        <div>
+          <h3 class="text-xl font-extrabold text-white mb-3 flex items-center gap-2">
+            <span>🏫</span> Lớp Học Cô Giáo Mai Hường
+          </h3>
+          <p class="text-slate-300 font-medium mb-3">
+            <strong>Đơn vị:</strong> Trường Cao đẳng Công nghiệp, Thương mại và Du lịch
+          </p>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            Hệ đào tạo Văn hóa THPT kết hợp Trung cấp / Cao đẳng nghề dành cho học sinh Khối 10, 11, 12. Đồng hành sát sao cùng các em học sinh vùng núi cao sinh hoạt nội trú tại Ký túc xá nhà trường.
+          </p>
+        </div>
+
+        <!-- Cột 2: Kênh liên hệ trực tiếp Cô Mai Hường -->
+        <div>
+          <h3 class="text-xl font-extrabold text-amber-400 mb-3 flex items-center gap-2">
+            <span>📞</span> Liên Hệ Cô Chủ Nhiệm Mai Hường
+          </h3>
+          <ul class="space-y-3 text-slate-200 font-medium">
+            <li>
+              <strong>Điện thoại / Hotline:</strong>
+              <a href="tel:0982909515" class="text-amber-300 font-extrabold hover:underline ml-1">0982.909.515 (0982909515)</a>
+            </li>
+            <li>
+              <strong>Nhắn tin Zalo trực tiếp:</strong>
+              <a href="https://zalo.me/0982909515" target="_blank" rel="noopener noreferrer" class="text-sky-300 font-bold hover:underline ml-1">https://zalo.me/0982909515</a>
+            </li>
+            <li>
+              <strong>Facebook cá nhân:</strong>
+              <a href="https://www.facebook.com/huong.tn.34518" target="_blank" rel="noopener noreferrer" class="text-sky-300 font-bold hover:underline ml-1 break-all">https://www.facebook.com/huong.tn.34518</a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Cột 3: Lời dặn dò yêu thương & Liên kết nhanh -->
+        <div>
+          <h3 class="text-xl font-extrabold text-emerald-400 mb-3 flex items-center gap-2">
+            <span>💛</span> Lời Dặn Dò Học Sinh Nội Trú
+          </h3>
+          <p class="text-slate-300 text-sm italic mb-4 leading-relaxed">
+            “Mỗi ngày ở Ký túc xá, các em hãy giữ phòng ở sạch đẹp, đi học đúng giờ, đoàn kết thương yêu bạn bè và thường xuyên gọi điện về cho bố mẹ yên lòng nhé!”
+          </p>
+          <a href="#hero" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-sky-700 hover:bg-sky-600 text-white font-extrabold text-sm transition-colors">
+            ⬆️ Lên đầu trang web
+          </a>
+        </div>
+      </div>
+
+      <div class="pt-6 text-center text-sm text-slate-400 font-medium">
+        <p>© 2026 Công tác Giáo viên Chủ nhiệm – Cô giáo Mai Hường | Trường Cao đẳng Công nghiệp, Thương mại và Du lịch.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- =======================================================================
+       NÚT NỔI LIÊN HỆ NHANH Ở GÓC DƯỚI MÀN HÌNH (FLOATING ACTION BUTTONS)
+       ======================================================================= -->
+  <div class="fixed bottom-4 right-4 z-40 flex flex-col sm:flex-row gap-2.5">
+    <a
+      href="https://zalo.me/0982909515"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-sky-600 hover:bg-sky-700 text-white font-extrabold text-sm md:text-base shadow-xl border-2 border-white"
+      aria-label="Nhắn Zalo cho cô Mai Hường"
+    >
+      <span>💬</span> <span>Zalo Cô Hường</span>
+    </a>
+    <a
+      href="tel:0982909515"
+      class="inline-flex items-center gap-2 px-4 py-3 rounded-full bg-orange-600 hover:bg-orange-700 text-white font-extrabold text-sm md:text-base shadow-xl border-2 border-white"
+      aria-label="Gọi điện cho cô Mai Hường 0982909515"
+    >
+      <span>📞</span> <span>Gọi: 0982.909.515</span>
+    </a>
+  </div>
+
+  <!-- =======================================================================
+       MODAL XEM CHI TIẾT THÔNG BÁO (CHỮ TO DỄ ĐỌC)
+       ======================================================================= -->
+  <div id="newsDetailModal" class="hidden fixed inset-0 z-50 bg-slate-950/75 backdrop-blur-sm items-center justify-center p-4" role="dialog" aria-modal="true" aria-labelledby="modalNewsTitle">
+    <div class="bg-white rounded-3xl max-w-2xl w-full p-6 sm:p-8 shadow-2xl border-4 border-sky-200 max-h-[90vh] overflow-y-auto">
+      <div class="flex items-start justify-between gap-4 mb-4">
+        <span id="modalNewsMeta" class="text-xs sm:text-sm font-extrabold text-sky-800 bg-sky-100 px-3 py-1 rounded-lg"></span>
+        <button type="button" id="closeNewsModalBtn" class="w-10 h-10 rounded-full bg-slate-200 hover:bg-red-100 text-slate-900 hover:text-red-700 font-extrabold text-xl flex items-center justify-center flex-shrink-0 cursor-pointer" aria-label="Đóng cửa sổ">
+          ✕
+        </button>
+      </div>
+
+      <h3 id="modalNewsTitle" class="text-2xl font-extrabold text-slate-900 mb-5"></h3>
+      <div id="modalNewsBody" class="text-lg text-slate-800 font-medium border-t-2 border-slate-100 pt-4"></div>
+
+      <div class="mt-6 pt-4 border-t-2 border-slate-100 flex flex-wrap items-center justify-between gap-3">
+        <a href="https://zalo.me/0982909515" target="_blank" rel="noopener noreferrer" class="btn-touch btn-zalo !py-2.5 !px-5 text-sm">
+          💬 Hỏi thêm Cô Mai Hường qua Zalo
+        </a>
+        <button type="button" id="closeNewsModalFooterBtn" class="btn-touch bg-slate-200 hover:bg-slate-300 text-slate-900 !py-2.5 !px-6 text-sm">
+          Đóng thông báo
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =======================================================================
+       MODAL LIGHTBOX PHÓNG TO ẢNH
+       ======================================================================= -->
+  <div id="imageLightboxModal" class="hidden fixed inset-0 z-50 bg-slate-950/85 backdrop-blur-sm items-center justify-center p-4" role="dialog" aria-modal="true" aria-label="Xem ảnh phóng to">
+    <div class="bg-white rounded-3xl max-w-3xl w-full p-4 sm:p-6 shadow-2xl relative">
+      <button type="button" id="closeLightboxBtn" class="absolute top-3 right-3 z-10 w-10 h-10 rounded-full bg-slate-900 text-white font-extrabold text-xl flex items-center justify-center cursor-pointer" aria-label="Đóng ảnh">
+        ✕
+      </button>
+      <img id="lightboxImage" src="a1.jpg" alt="Hình ảnh phóng to" class="w-full max-h-[72vh] object-contain rounded-2xl bg-slate-100 mx-auto" />
+      <p id="lightboxCaption" class="mt-3 text-center font-bold text-slate-800 text-base px-2"></p>
+    </div>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div id="toastNotification" class="toast-banner" role="status" aria-live="polite"></div>
+
+  <!-- Main JavaScript -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
